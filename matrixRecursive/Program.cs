@@ -49,12 +49,23 @@ namespace matrixRecursive
                 }
             }
         }
-
+            
         static void EnterMatrixB()
         {
             for (int i = 0; i < n; i++)
             {
-                for (int j = 0; j < n; j++)
+                int k = n - 1;
+
+                if (i <= (n / 2) - 1)
+                {
+                    k -= i;
+                }
+                else
+                {
+                    k = i;
+                }
+
+                for (int j = k; j < n; j++)
                 {
                     B[i, j] = Convert.ToDouble(Console.ReadLine());
                 }
@@ -107,13 +118,10 @@ namespace matrixRecursive
                     for (int k = 0; k < A.GetLength(0); k++)
                     {
                         temp[i, j, k + 1] = temp[i, j, k] + A[i, k] * B[k, j];
-                        m_operations++;
-                       // Console.Write(temp[i, j, k + 1] + " ");
+                        m_operations++;                       
                     }
-                    C[i, j] = temp[i, j, n];
-                    //Console.WriteLine();
-                }
-               // Console.WriteLine();
+                    C[i, j] = temp[i, j, n];                 
+                }             
             }           
         }
 
@@ -123,12 +131,11 @@ namespace matrixRecursive
            
             if (i < size && j < size && k < size)
             {
-                 Console.WriteLine(String.Format("i: {0}, j: {1}, k: {2}", i, j, k));
+               
                 if (A[i, k] != 0 && B[k, j] != 0)
                 {
                     C2temp[i, j, size] +=  A[i, k] * B[k, j];
-                    r_operations++;
-                    Console.WriteLine(A[i, k] + " " + B[k, j]);
+                    r_operations++;               
                 }        
                 
                     RecursiveMulti(i, j, k + 1);
@@ -152,11 +159,9 @@ namespace matrixRecursive
             for (int i = 0; i < A.GetLength(0); i++)
             {
                 for (int j = 0; j < A.GetLength(0); j++)
-                {
-                  //  Console.WriteLine(C2temp[i, j, n] + " ");
+                {               
                     C2[i, j] = C2temp[i, j, n];
-                }
-               // Console.WriteLine();
+                }             
             }
         }
 
