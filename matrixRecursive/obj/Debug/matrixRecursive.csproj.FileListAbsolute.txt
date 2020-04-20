@@ -1,0 +1,7 @@
+C:\Users\Vitaliy\source\repos\matrixRecursive\matrixRecursive\obj\Debug\matrixRecursive.csprojAssemblyReference.cache
+C:\Users\Vitaliy\source\repos\matrixRecursive\matrixRecursive\obj\Debug\matrixRecursive.csproj.CoreCompileInputs.cache
+C:\Users\Vitaliy\source\repos\matrixRecursive\matrixRecursive\bin\Debug\matrixRecursive.exe.config
+C:\Users\Vitaliy\source\repos\matrixRecursive\matrixRecursive\bin\Debug\matrixRecursive.exe
+C:\Users\Vitaliy\source\repos\matrixRecursive\matrixRecursive\bin\Debug\matrixRecursive.pdb
+C:\Users\Vitaliy\source\repos\matrixRecursive\matrixRecursive\obj\Debug\matrixRecursive.exe
+C:\Users\Vitaliy\source\repos\matrixRecursive\matrixRecursive\obj\Debug\matrixRecursive.pdb
