@@ -118,7 +118,7 @@ namespace matrixRecursive
                     for (int k = 0; k < A.GetLength(0); k++)
                     {
                         temp[i, j, k + 1] = temp[i, j, k] + A[i, k] * B[k, j];
-                        m_operations++;                       
+                        m_operations+=2;                       
                     }
                     C[i, j] = temp[i, j, n];                 
                 }             
@@ -135,7 +135,7 @@ namespace matrixRecursive
                 if (A[i, k] != 0 && B[k, j] != 0)
                 {
                     C2temp[i, j, size] +=  A[i, k] * B[k, j];
-                    r_operations++;               
+                    r_operations+=2;               
                 }        
                 
                     RecursiveMulti(i, j, k + 1);
@@ -200,14 +200,14 @@ namespace matrixRecursive
             Multiplication();
 
 
-            Console.WriteLine("\nC matrix: ");
+            Console.WriteLine("\nOne time assignment method: ");
             OneTimeAssignment();
             ShowMatrix(C);
             Console.WriteLine("Operations: " + m_operations);
 
             
 
-            Console.WriteLine("C2 matrix: ");
+            Console.WriteLine("Recursive method: ");
             RecursiveMulti(0, 0, 0);                                      
             GetLastData();
             ShowMatrix(C2);
